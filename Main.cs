@@ -39,7 +39,7 @@ namespace Towers_Hit_Everything
                 {
                     weapon.projectile.canCollisionBeBlockedByMapLos = false;
                     weapon.projectile.ignoreBlockers = true;
-                    if (AllBloons & (weapon.projectile.GetBehavior<DamageModel>() != null))
+                    if (AllBloons && (weapon.projectile.GetBehavior<DamageModel>() != null))
                     {
                         var damagemodel = weapon.projectile.GetDamageModel();
                         damagemodel.immuneBloonProperties = BloonProperties.None;
